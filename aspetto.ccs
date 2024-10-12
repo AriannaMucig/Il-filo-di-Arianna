@@ -1,27 +1,4 @@
 h1 {color:#BD5FDB;text-align: center}
-body {font-family: Garamond, serif;font-size: 18px}
+body {font-family: Garamond, serif;font-size: 30px}
 h2{text-decoration-line: underline;text-decoration-style: wavy;}
-div.gallery {
-  margin: 5px;
-  border: 1px ;
-  border-style:solid ;
-  border-color:#8C3DE3;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 2px ;
-  border-style:solid ;
-  border-color:#8C3DE3;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
+table {width: 100%; text-align: left;}

@@ -1,0 +1,5 @@
+h1 {color:#BD5FDB;text-align: center}
+body {font-family: Garamond, serif;font-size: 18px}
+h2{text-decoration-line: underline;text-decoration-style: wavy;}
+table.special { text-align: center;}
+th.special:hover {color: #BD5FDB;}
