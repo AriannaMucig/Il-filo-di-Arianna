@@ -7,6 +7,7 @@
   <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
 </head>
 <body>
+  <a href="index.html"> <img src="casa.png" width="30" height="30"></a>
 <h1> Cover porta libro </h1>
 
 <h2> Ispirazione </h2>
@@ -30,11 +31,30 @@ Unire le mattonelle in due pallelli, uno da 6 e uno da 9 mattonelle, con degli s
 <br>
 Unire i due pannelli con punti bassi
 
-<h2> Risultato finale</h2>
-<img src="mattonella cuore.jpg" width="32%" height="32%">
-<img src="Cover libro.jpg" width="20%" height="20%">
-<br>
-<a href="index.html"> <img src="casa.png" width="30" height="30"></a>
+<h2 id="click"> Risultato finale</h2> <p id="canc">(Clicca per vedere)</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const existingText = document.getElementById("click");
+      existingText.addEventListener("click", function() {
+        if (!document.getElementById("img1") && !document.getElementById("img2")) {
+        const newImg1 = document.createElement("img");
+        newImg1.src = "mattonella cuore.jpg";
+         newImg1.id = "img1";
+        newImg1.style.width = "32%";
+        newImg1.style.height = "32%";
+        const newImg2 = document.createElement("img");
+        newImg2.src = "Cover libro.jpg";
+        newImg2.id = "img2";
+        newImg2.style.width = "20%";
+        newImg2.style.height = "20%";
 
+        existingText.parentElement.appendChild(newImg1);
+        existingText.parentElement.appendChild(newImg2);
+        }
+        document.getElementById("canc").remove()
+      });
+    });
+  </script>
+<br>
 </body>
 </html>

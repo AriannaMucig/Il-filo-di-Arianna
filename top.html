@@ -7,6 +7,7 @@
   <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
 </head>
 <body>
+  <a href="index.html"> <img src="casa.png" width="30" height="30"></a>
 <h1> Top amicizia </h1>
 
 <h2> Ispirazione </h2>
@@ -50,11 +51,33 @@ Spalline (x2):
 <li style="color:blue"> riga 5: 57 (tr, (2 tr))</li>
 </ul>
 
-<h2> Risultato finale</h2>
-<img src="Top avanti.jpg" width="25%" height="25%">
-<img src="Top dietro.jpg" width="32%" height="32%">
+<h2 id="click"> Risultato finale</h2> <p id="canc">(Clicca per vedere)</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const existingText = document.getElementById("click");
+      existingText.addEventListener("click", function() {
+        if (!document.getElementById("img1") && !document.getElementById("img2")) {
+        const newImg1 = document.createElement("img");
+        newImg1.src = "Top avanti.jpg";
+         newImg1.id = "img1";
+        newImg1.style.width = "25%";
+        newImg1.style.height = "25%";
+        const newImg2 = document.createElement("img");
+        newImg2.src = "Top dietro.jpg";
+        newImg2.id = "img2";
+        newImg2.style.width = "32%";
+        newImg2.style.height = "32%";
+
+        existingText.parentElement.appendChild(newImg1);
+        existingText.parentElement.appendChild(newImg2);
+        }
+        document.getElementById("canc").remove()
+      });
+    });
+  </script>
 <br>
-<a href="index.html"> <img src="casa.png" width="30" height="30"></a>
+
+
 
 </body>
 </html>
